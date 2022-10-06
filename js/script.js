@@ -1,11 +1,23 @@
 let mostrar=document.getElementById("Resultado")
 let list=[]
 let final=0
+var estado = false;
 
-const num=(num)=>{
-    mostrar.textContent = mostrar.textContent + num
-    validacion()
+const num = (num) => {
+    if (num === '.') {
+        if (estado == true) {
+            return
+        } else {
+            estado = true;
+            mostrar.textContent = mostrar.textContent + num
+            validacion()
+        }
+    } else {
+        mostrar.textContent = mostrar.textContent + num
+        validacion()
+    }
 }
+
 
 const operation=(ope)=>{
     mostrar.textContent = mostrar.textContent + ope
