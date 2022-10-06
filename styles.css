@@ -74,3 +74,7 @@ table.table-home tbody{
 #ContenidoHistorial{
     display: none;
 }
+body{
+    margin: 0;
+    background-color: #000000;
+}
