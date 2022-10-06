@@ -78,7 +78,7 @@ const resultado=()=>{
         list.push(v+' = '+mostrar.textContent)
         final=0
     }else{
-        alert('Debe completar la operación');
+        alert('Completar la operación');
     }
 }
 
@@ -98,7 +98,7 @@ const historial=()=>{
             cont+="<p class='mb-1'>"+list[i]+"</p>";
         }
     }else{
-        cont="<p>No tienes historial en estos momentos</p>";
+        cont="<p>No se han registrado operaciones</p>";
     }
     
     body.innerHTML=cont;

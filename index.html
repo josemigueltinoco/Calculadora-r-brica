@@ -12,35 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar text-white" style="background-color: rgb(72, 230, 125); font-family: Roboto;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="https://www.cuc.edu.co/wp-content/uploads/2022/05/Diseno-sin-titulo-18.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
-            Calculadora
+          <a class="navbar-brand text-black fw-bold" href="#">
+            <img src="https://www.cuc.edu.co/wp-content/uploads/2022/05/Diseno-sin-titulo-18.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" >
+            DESARROLLO WEB 1
           </a>
         </div>
-      </nav>
+    </nav>
+    <br>
 
       <div class="row g-5">
 
-        <div class="col-md-5 mx-auto">
-
-           
-            <div class="card mb-2" id="ContenidoHistorial">
-                <div class="card-header bg-info text-white"><i class="bi bi-list-check me-2"></i> Historial</div>
-                <div class="card-body">
-                    <div id="ListadoHistorial"></div>
-                </div>
-                <div class="spinner-border text-primary" id="load" role="status">
-                    <span class="visually-hidden">Cargando...</span>
-                </div>
-            </div>
+        <div class="col-md-5 mx-auto Roboto">
 
             <div class="card">
-                <div class="card-header bg-success text-white"><i class="bi bi-calculator me-2"></i> CALCULADORA</div>
+                <div class="card-header text-center text-black fw-bold" style="background-color: rgba(110, 224, 148, 0.836); font-family: Roboto;"><i class="bi bi-calculator me-2"></i> CALCULADORA</div>
                 <div class="card-body bg-calculadora">
                     
-                    <div class="row">
+                    <div id="appBg">
                         <div class="col-md-12">
                             <textarea class="form-control" id="Resultado" rows="3" disabled></textarea>
                         </div>
@@ -49,72 +39,73 @@
                             <div class="card">
                                 <div class="card-body ">
                                      
-                                    <div class="row justify-content-center">
-                                        <div class="col-sm-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-danger" title="Limpiar" onclick="limpiar(1)">AC</button>
-                                        </div>
-                                        <div class="col-sm-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-info" title="Historial" onclick="historial()">UL</button>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="row">
                                         <!-- 1 -->
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(7)">7</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(7)">7</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(8)">8</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(8)">8</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(9)">9</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(9)">9</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2 fw-bold">
-                                            <button type="button" class="btn btn-warning" onclick="operation('/')">/</button>
+                                            <button type="button" class="btn btn-outline-warning" onclick="operation('/')">/</button>
                                         </div>
 
                                        <!--  2 -->
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(4)">4</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(4)">4</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(5)">5</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(5)">5</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(6)">6</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(6)">6</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2 fw-bold">
-                                            <button type="button" class="btn btn-warning" onclick="operation('*')">*</button>
+                                            <button type="button" class="btn btn-outline-warning" onclick="operation('*')">*</button>
                                         </div>
 
                                         <!-- 3 -->
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(1)">1</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(1)">1</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(2)">2</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(2)">2</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(3)">3</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(3)">3</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 mb-2 fw-bold">
-                                            <button type="button" class="btn btn-warning" onclick="operation('-')">-</button>
+                                            <button type="button" class="btn btn-outline-warning" onclick="operation('-')">-</button>
                                         </div>
 
                                         <!-- 4 -->
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num(0)">0</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num(0)">0</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1">
-                                            <button type="button" class="btn btn-outline-primary" onclick="num('.')">.</button>
+                                            <button type="button" class="btn btn-outline-dark" onclick="num('.')">.</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 fw-bold">
-                                            <button type="button" class="btn btn-primary" onclick="resultado()">=</button>
+                                            <button type="button" class="btn btn-outline-warning" onclick="resultado()">=</button>
                                         </div>
                                         <div class="col-3 col-sm-3 col-md-3 col-lg-3 text-center d-grid px-1 fw-bold">
-                                            <button type="button" class="btn btn-warning" onclick="operation('+')">+</button>
+                                            <button type="button" class="btn btn-outline-warning" onclick="operation('+')">+</button>
                                         </div>
                                     </div>
-                                    
+                                    <br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-3 text-center d-grid px-1 mb-2">
+                                            <button type="button" class="btn btn-light" title="Limpiar" onclick="limpiar(1)">AC</button>
+                                        </div>
+                                        <div class="col-sm-3 text-center d-grid px-1 mb-2">
+                                            <button type="button" class="btn btn-light" title="Historial" onclick="historial()">UL</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,14 +116,22 @@
                 </div>
             </div>
         </div>
-
+        <div class="card mb-2" id="ContenidoHistorial">
+            <div class="card-header text-white" style="background-color: rgba(110, 224, 148, 0.836); font-family: Roboto;"><i class="bi bi-list-check me-2"></i> Historial</div>
+            <div class="card-body">
+                <div id="ListadoHistorial"></div>
+            </div>
+            <div class="spinner-border text-primary" id="load" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
       </div>
     </main>
     <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3"  style="background-color: rgba(110, 224, 148, 0.836); font-family: Roboto;">
           José Rodríguez Desarrollo web 1:
-          <a class="text-dark" href="https://github.com/josemigueltinoco"> GitHub</a>
+          <a class="text-black" href="https://github.com/josemigueltinoco"> GitHub</a>
         </div>
         <!-- Copyright -->
       </footer>
